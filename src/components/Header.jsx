@@ -6,8 +6,8 @@ import logo from "../assets/logo.png"
 export default function Header(props) {
   const navigate = useNavigate();
   return (
-    <Container>
-      <div classNmae="logo">
+    <Container className="flex a-center j-between">
+      <div className="logo">
         <img src={logo} alt="logo" />
       </div>
       <button onClick={()=> navigate(props.login ? "/login" : "/singup")}>
