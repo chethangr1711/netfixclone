@@ -15,7 +15,6 @@ export default function Header(props) {
       </button>
     </Container>
   )
-
 }
 
 const Container = styled.div`
