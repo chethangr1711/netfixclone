@@ -1,4 +1,4 @@
- import React, { useState } from 'react'
+ import React,{useState} from 'react'
  import styled from "styled-components"
  import BackgroundImage from '../components/BackgroundImage'
  import Header from "../components/Header"
@@ -18,12 +18,7 @@
             </div>
             <div className='form'>
                 <input type="email" placeholder="Email Address" autoComplete='off' name="email" />
-                {
-                    showPassword &&(
-                        <input type="password" placeholder="Password" autoComplete='off' name="password" />
-                    )
-                }
-                
+                <input type="password" placeholder="Password" autoComplete='off' name="password" />
                 {!showPassword && <button onClick={()=>setshowPassword(true)}>Get Started</button>}
             </div> 
             <button>Log In</button>
@@ -56,7 +51,6 @@
           }
           .form{
               display:grid;
-              grid-template-columns:${({showPassword})=>showPassword ? "1fr 1fr":"2fr 1fr"};
               width:60%;
               input{
                   color:black;

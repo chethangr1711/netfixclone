@@ -1,12 +1,12 @@
- import React, { useState } from 'react'
+ import React from 'react'
  import styled from "styled-components"
  import BackgroundImage from '../components/BackgroundImage'
  import Header from "../components/Header"
 
  export default function Signup() {
-     const [showPassword, setshowPassword] = useState(false); 
+     const [showPassword, setshowPassword] = useState(false);
    return (
-   <Container showPassword={showPassword}>
+   <Container>
        <BackgroundImage />
        <div className='content'>
        <Header login />
@@ -18,13 +18,8 @@
             </div>
             <div className='form'>
                 <input type="email" placeholder="Email Address" autoComplete='off' name="email" />
-                {
-                    showPassword &&(
-                        <input type="password" placeholder="Password" autoComplete='off' name="password" />
-                    )
-                }
-                
-                {!showPassword && <button onClick={()=>setshowPassword(true)}>Get Started</button>}
+                <input type="password" placeholder="Password" autoComplete='off' name="password" />
+                <button>Get Started</button>
             </div> 
             <button>Log In</button>
         </div>
@@ -56,7 +51,6 @@
           }
           .form{
               display:grid;
-              grid-template-columns:${({showPassword})=>showPassword ? "1fr 1fr":"2fr 1fr"};
               width:60%;
               input{
                   color:black;
