@@ -42,7 +42,7 @@
                 
                 {!showPassword && <button onClick={()=>setshowPassword(true)}>Get Started</button>}
             </div> 
-            <button onClick={handleSignIn}>Sign Up</button>
+            <button>Sign Up</button>
         </div>
         </div>
    </Container>

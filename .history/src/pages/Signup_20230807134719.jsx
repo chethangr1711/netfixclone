@@ -5,14 +5,6 @@
 
  export default function Signup() {
      const [showPassword, setshowPassword] = useState(false); 
-     const [formValues,setFormValues] = useState({
-         email:"",
-         password:"",
-     });
-
-     const handleSignIn = async ()=>{
-         console.log(formValues);
-     }
    return (
    <Container showPassword={showPassword}>
        <BackgroundImage />
@@ -25,24 +17,16 @@
                 <h6>Ready to watch? Enter your email to create your membership</h6>
             </div>
             <div className='form'>
-                <input type="email" placeholder="Email Address" autoComplete='off' name="email" value={formValues.email} onChange={(e)=>setFormValues({
-                    ...formValues,
-                    [e.target.name]:e.target.value,
-                     })} />
+                <input type="email" placeholder="Email Address" autoComplete='off' name="email" />
                 {
                     showPassword &&(
-                        <input type="password" placeholder="Password" autoComplete='off' name="password" value={formValues.password} 
-                            onChange={(e)=>setFormValues({
-                            ...formValues,
-                            [e.target.name]:e.target.value,
-                            })}
-                        />
+                        <input type="password" placeholder="Password" autoComplete='off' name="password" />
                     )
                 }
                 
                 {!showPassword && <button onClick={()=>setshowPassword(true)}>Get Started</button>}
             </div> 
-            <button onClick={handleSignIn}>Sign Up</button>
+            <button>Sign Up</button>
         </div>
         </div>
    </Container>
