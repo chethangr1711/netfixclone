@@ -56,31 +56,7 @@
                   border:none;
                   padding:1.25rem;
                   font-size:1.2rem;
-                  border:1px solid black;
-                  &:focus{
-                    outline:none;
-                  }
               }
-              button{
-                padding:0.5rem 1rem;
-                background-color: #e50914;
-                border:none;
-                cursor:pointer;
-                color:white;
-                border-radius: 0.2rem;
-                font-size:1.05rem;
-                font-weight:1.05rem;
-              }
-          }
-          button{
-            padding:0.5rem 1rem;
-            background-color: #e50914;
-            border:none;
-            cursor:pointer;
-            color:white;
-            border-radius: 0.2rem;
-            font-size:1.05rem;
-            font-weight:bolder;
           }
       }
   }

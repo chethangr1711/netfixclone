@@ -74,13 +74,13 @@
           }
           button{
             padding:0.5rem 1rem;
-            background-color: #e50914;
-            border:none;
-            cursor:pointer;
-            color:white;
-            border-radius: 0.2rem;
-            font-size:1.05rem;
-            font-weight:bolder;
+  background-color: #e50914;
+  border:none;
+  cursor:pointer;
+  color:white;
+  border-radius: 0.2rem;
+  font-size:1.05rem;
+  font-weight:bolder;
           }
       }
   }
