@@ -34,21 +34,27 @@ body::-webkit-scrollbar{
 .j-between{
   justify-content: space-between;
 }
+
 .a-center{
   align-items: center;
 }
+
 .grid{
   display: grid;
 }
+
 .row{
   width: 100%;
 }
+
 .col-lg-12{
   width:100%;  
 }
-.j-center{
+
+.justify-center{
   justify-content: center;
 }
-.bold{
-  font-weight: bold;
+
+.align-center{
+  align-items: center;
 }
