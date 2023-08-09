@@ -48,9 +48,5 @@ body::-webkit-scrollbar{
 }
 
 .col-lg-12{
-  width:100%;  
-}
-
-.justify-center{
-  justify-content: center;
+  width:100%  
 }
