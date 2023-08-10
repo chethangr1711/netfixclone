@@ -2,7 +2,6 @@
  import styled from "styled-components"
  import BackgroundImage from '../components/BackgroundImage'
  import Header from "../components/Header"
- import { firebaseAuth } from "../utils/firebase-config";
 
  export default function Signup() {
      const [showPassword, setshowPassword] = useState(false); 
@@ -13,8 +12,7 @@
 
      const handleSignIn = async ()=>{
         try {
-           const {email,password}=formValues;
-           await createUserWithEmailAndPassword(firebaseAuth) 
+            
         } catch (error) {
             console.log(error);
         }

@@ -2,7 +2,6 @@
  import styled from "styled-components"
  import BackgroundImage from '../components/BackgroundImage'
  import Header from "../components/Header"
- import { firebaseAuth } from "../utils/firebase-config";
 
  export default function Signup() {
      const [showPassword, setshowPassword] = useState(false); 
