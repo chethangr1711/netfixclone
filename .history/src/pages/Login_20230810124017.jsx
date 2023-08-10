@@ -63,7 +63,7 @@ export default function Login() {
                     />
                 
                 
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={()=>setshowPassword(true)}>Login</button>
                 </div>
              </div>
           </div>
@@ -83,23 +83,43 @@ export default function Login() {
       width:100vw;
       display:grid;
       grid-template-rows: 15vh 85vh;
-      .form-container{
-        gap:2rem;
-        height:85vh;
-        .form{
-          padding2rem;
-          background-color: #000000b0;
-          width:25vh;
-          gap:2rem;
-          color:white;
-          .container{
-            gap:2rem;
-            input{
-              padding:0.5rem 1rem;
-              widht:15rem;
-            }
-            button{
-              padding:0.5rem 1rem;
+      .body{
+          gap:1rem;
+          .text{
+              gap:1rem;
+              text-align:center;
+              font-size:2rem;
+              h1{
+                  padding:0 25rem;
+              }
+          }
+          .form{
+              display:grid;
+              grid-template-columns:${({showPassword})=>showPassword ? "1fr 1fr":"2fr 1fr"};
+              width:60%;
+              input{
+                  color:black;
+                  border:none;
+                  padding:1.25rem;
+                  font-size:1.2rem;
+                  border:1px solid black;
+                  &:focus{
+                    outline:none;
+                  }
+              }
+              button{
+                padding:0.5rem 1rem;
+                background-color: #e50914;
+                border:none;
+                cursor:pointer;
+                color:white;
+               
+                font-size:1.05rem;
+                font-weight:1.05rem;
+              }
+          }
+          button{
+            padding:0.5rem 1rem;
             background-color: #e50914;
             border:none;
             cursor:pointer;
@@ -107,9 +127,7 @@ export default function Login() {
             border-radius: 0.2rem;
             font-size:1.05rem;
             font-weight:bolder;
-              }
           }
-        }
       }
   }
  `;
