@@ -4,11 +4,8 @@
  import Header from "../components/Header"
  import { firebaseAuth } from "../utils/firebase-config";
  import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
-
+import { Navigate } from 'react-router-dom';
  export default function Signup() {
-    const navigate = useNavigate();
-
      const [showPassword, setshowPassword] = useState(false); 
      const [formValues,setFormValues] = useState({
          email:"",

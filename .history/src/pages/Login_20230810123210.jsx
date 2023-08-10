@@ -1,13 +1,13 @@
- import React, { useState } from 'react'
- import styled from "styled-components"
- import BackgroundImage from '../components/BackgroundImage'
- import Header from "../components/Header"
- import { firebaseAuth } from "../utils/firebase-config";
- import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import React, { useState } from 'react'
+import styled from "styled-components"
+import BackgroundImage from '../components/BackgroundImage'
+import Header from "../components/Header"
+import { firebaseAuth } from "../utils/firebase-config";
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
- export default function Signup() {
-    const navigate = useNavigate();
+export default function Login() {
+  const navigate = useNavigate();
 
      const [showPassword, setshowPassword] = useState(false); 
      const [formValues,setFormValues] = useState({
@@ -30,36 +30,7 @@ import { useNavigate } from 'react-router-dom';
 
    return (
    <Container showPassword={showPassword}>
-       <BackgroundImage />
-       <div className='content'>
-       <Header login />
-        <div className='body flex column a-center j-center'>
-            <div className='text flex column'>
-                <h1>Unlimited Movies, TV shows and more</h1>
-                <h4>Watch anywhere. Cancel anytime</h4>
-                <h6>Ready to watch? Enter your email to create your membership</h6>
-            </div>
-            <div className='form'>
-                <input type="email" placeholder="Email Address" autoComplete='off' name="email" value={formValues.email} onChange={(e)=>setFormValues({
-                    ...formValues,
-                    [e.target.name]:e.target.value,
-                     })} />
-                {
-                    showPassword &&(
-                        <input type="password" placeholder="Password" autoComplete='off' name="password" value={formValues.password} 
-                            onChange={(e)=>setFormValues({
-                            ...formValues,
-                            [e.target.name]:e.target.value,
-                            })}
-                        />
-                    )
-                }
-                
-                {!showPassword && <button onClick={()=>setshowPassword(true)}>Get Started</button>}
-            </div> 
-            <button onClick={handleSignIn}>Sign Up</button>
-        </div>
-        </div>
+      
    </Container>
    )
  }

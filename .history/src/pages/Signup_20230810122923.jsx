@@ -5,7 +5,6 @@
  import { firebaseAuth } from "../utils/firebase-config";
  import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-
  export default function Signup() {
     const navigate = useNavigate();
 
